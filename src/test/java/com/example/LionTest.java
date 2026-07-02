@@ -29,7 +29,6 @@ public class LionTest {
         assertEquals(expected, actual);
 
         Mockito.verify(feline).getFood("Хищник");
-
     }
 
     @Test
