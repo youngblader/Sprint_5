@@ -19,17 +19,17 @@ class CatTest {
     private Feline feline;
 
     @BeforeEach
-    void setUp() {
+    void setUpTest() {
         this.cat = new Cat(feline);
     }
 
     @Test
-    public void shouldReturnSound() {
+    void shouldReturnSound() {
         assertEquals("Мяу", cat.getSound());
     }
 
     @Test
-    public void shouldReturnFood() throws Exception {
+    void shouldReturnFood() throws Exception {
         List<String> expectedFood = List.of("Мясо", "Рыба");
         Mockito.when(feline.eatMeat()).thenReturn(expectedFood);
 
